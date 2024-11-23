@@ -46,12 +46,12 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
+//przewijanie
 document.addEventListener("DOMContentLoaded", () => {
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
     const navLinks = document.querySelectorAll(".nav-link");
 
-    // Funkcja blokująca przewijanie
     const toggleScroll = () => {
         if (navbarCollapse.classList.contains("show")) {
             document.body.classList.add("noscroll");
@@ -60,16 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Obsługa kliknięcia na przycisk hamburgera
     navbarToggler.addEventListener("click", () => {
-        setTimeout(toggleScroll, 300); // Czekamy na zakończenie animacji
+        setTimeout(toggleScroll, 300); 
     });
 
-    // Zamknięcie menu po kliknięciu w link
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (navbarCollapse.classList.contains("show")) {
-                navbarToggler.click(); // Symulacja kliknięcia przycisku
+                navbarToggler.click(); 
             }
         });
     });
@@ -81,7 +79,6 @@ document.getElementById('useAccountData').addEventListener('change', function() 
     const fields = ['imie', 'nazwisko', 'email', 'telefon', 'adres', 'miasto', 'kod'];
     const isChecked = this.checked;
 
-    // Example mock user data
     const mockData = {
         imie: 'Jan',
         nazwisko: 'Kowalski',

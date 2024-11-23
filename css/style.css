@@ -1,4 +1,3 @@
-/* Poprawki do nawigacji */
 .navbar-brand img {
     position: absolute;
     top: 0;
@@ -42,10 +41,10 @@
 
 @media(max-width: 991px) {
     .navbar-collapse {
-        position: fixed; /* Ustawienie fixed, aby nawigacja była na stałe */
-        top: 50%; /* Wyśrodkowanie w pionie */
-        left: 50%; /* Wyśrodkowanie w poziomie */
-        transform: translate(-50%, -50%); /* Dostosowanie do środka */
+        position: fixed;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
         backdrop-filter: blur(6px);
         background-color: rgba(0, 0, 0, 0.3);
         margin-top: 10px;
@@ -56,19 +55,19 @@
         width: 100%;
         transition: height 0.2s ease, opacity 0.2s ease;
         opacity: 0;
-        visibility: hidden; /* Ukrycie nawigacji początkowo */
+        visibility: hidden;
     }
 
     .nav-item i {
-        display: none; /* Ukryj ikonki */
+        display: none; 
     }
     .nav-item span {
-        display: inline; /* Pokaż tekst */
+        display: inline; 
     }
 
     .navbar-collapse.show {
         opacity: 1;
-        visibility: visible; /* Pokazanie nawigacji po rozwinięciu */
+        visibility: visible;
     }
 
     .navbar-collapse .navbar-nav .nav-item:nth-child(1) {
@@ -109,7 +108,7 @@
     }
 
     .navbar-nav .nav-item {
-        width: 100%; /* Ustalamy szerokość na 100% */
+        width: 100%;
         padding: 10px 0;
         text-align: center;
         transition: transform 0.2s ease, opacity 0.2s ease;
@@ -118,9 +117,9 @@
 
     /* Dla linków w nawigacji */
     .navbar-nav .nav-item a {
-        display: block; /* Ustawiamy linki na 100% szerokości */
+        display: block;
         width: 100%;
-        padding: 12px 0; /* Większe pady dla lepszego wyglądu */
+        padding: 12px 0;
         text-align: center;
         color: white !important;
         text-decoration: none;
@@ -132,7 +131,6 @@
     }
 }
 
-/* Poprawki do przycisków */
 .navbar-toggler {
     z-index: 9999;
     margin-top: 15px;
@@ -144,7 +142,7 @@
 }
 
 .card-footer .btn {
-    width: 100%; /* Przyciski zajmują całą szerokość karty */
+    width: 100%;
 }
 
 .card-footer .btn i {
@@ -157,30 +155,30 @@
 }
 
 .card {
-    background-color: #1e1e1e; /* Ciemne tło */
-    color: #fff; /* Biały tekst */
-    border: none; /* Usunięcie ramki */
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtelny cień */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Wyrównanie przycisków na dole */
+    justify-content: space-between; 
     height: 100%;
 }
 
 .rel{
-    background-color: #1e1e1e; /* Ciemne tło */
-    color: #fff; /* Biały tekst */
-    border: none; /* Usunięcie ramki */
+    background-color: #1e1e1e;
+    color: #fff; 
+    border: none; 
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtelny cień */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Wyrównanie przycisków na dole */
+    justify-content: space-between;
     height: 100%;
     padding:30px; 
     margin-top: 25px;
@@ -188,23 +186,23 @@
 
 
 .summary-card {
-    min-width: 200px; /* Zapewnia czytelność dla mniejszych ekranów */
+    min-width: 200px; 
 }
 .d-flex > .mb-4 {
-    flex: 1; /* Wyrównuje szerokość sekcji */
+    flex: 1; 
 }
 
 .card:hover {
-    transform: scale(1.02); /* Powiększenie na hover */
+    transform: scale(1.02); 
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
 }
 
 .card img {
-    object-fit: contain; /* Umożliwia pełne dopasowanie obrazu */
-    height: 250px; /* Zwiększ wysokość, aby pokazać więcej butelki */
+    object-fit: contain;
+    height: 250px; 
     width: 100%;
-    padding: 10px; /* Dystans od krawędzi */
-    background-color: #1e1e1e; /* Tło wypełniające wolne przestrzenie */
+    padding: 10px;
+    background-color: #1e1e1e;
 }
 
 .card-body {
@@ -219,7 +217,7 @@
 
 .card-text {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7); /* Lekko szary tekst */
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .card-footer {
@@ -229,7 +227,7 @@
 }
 
 .card-footer .btn {
-    background-color: #f39c12; /* Akcent kolorystyczny */
+    background-color: #f39c12;
     color: #fff;
     font-weight: bold;
     border: none;
@@ -237,12 +235,11 @@
 }
 
 .card-footer .btn:hover {
-    background-color: #d35400; /* Kolor hover */
+    background-color: #d35400;
 }
 
-/* Poprawki do przycisków w koszyku */
 .cart .btn {
-    background-color: #f39c12; /* Akcent kolorystyczny */
+    background-color: #f39c12; 
     color: #fff;
     font-weight: bold;
     border: none;
@@ -250,7 +247,7 @@
 }
 
 .cart .btn:hover {
-    background-color: #d35400; /* Kolor hover */
+    background-color: #d35400; 
 }
 
 .main img{
@@ -363,8 +360,8 @@ body.noscroll {
      text-align: center !important;
      } 
      .summary-card {
-        margin: 0 auto 10px; /* Wyśrodkowanie i margines dolny */
-        display: block; /* Upewniamy się, że element zachowuje się jak blokowy */
+        margin: 0 auto 10px;
+        display: block;
     }
     .relbtn{
        margin: 20px 0;
@@ -381,8 +378,6 @@ body.noscroll {
         margin-top: 50px;
     }
 }
-
-
 
 .login{
     width: 100%;
@@ -488,22 +483,18 @@ body.noscroll {
     box-shadow: 0 0 5px #f39c12;
 }
 
-/* width */
 ::-webkit-scrollbar {
     width: 12px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #222;
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #444;
   }
   
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   } 
@@ -514,6 +505,7 @@ body.noscroll {
     width: 100%;
     height: 100vh;
     min-height: 35rem;
+    min-height: 100vh;
     padding: 15rem 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/kratypiwa.png");
     background-position: center;
@@ -521,3 +513,21 @@ body.noscroll {
     background-attachment:scroll;
     background-size: cover;
   }
+
+  @media (max-width: 330px) {
+
+
+    .masthead {
+        background-size: cover; 
+        background-position: center;
+    }
+
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text-center h1, .text-center h2 {
+        font-size: 20px;
+    }
+}
