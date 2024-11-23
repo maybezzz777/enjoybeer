@@ -12,41 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
     <link href="css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
-    <style>
-
-        .navbar {
-            background-color: #1e1e1e;
-        }
-        .navbar a.nav-link {
-            color: #e0e0e0;
-        }
-        .navbar a.nav-link:hover {
-            color: #f39c12;
-        }
-        .form-control, .form-check-label {
-            background-color: #2c2c2c;
-            color: #e0e0e0;
-            border: 1px solid #444;
-        }
-        .form-control:focus {
-            background-color: #333;
-            color: #e0e0e0;
-            border-color: #f39c12;
-            box-shadow: 0 0 5px #f39c12;
-        }
-        .btn-primary {
-            background-color: #f39c12;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #d87b0f;
-        }
-        
-    </style>
-    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top position-absolute" id="mainNav">
         <div class="container px-4 px-lg-5">
             <div class="navbar-brand"><img src="img/Logo.png" alt="logo" ></div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,31 +81,39 @@
                     </div>
                 </div>
 
-  
-                <div class="mb-4">
-                    <h5>Opcje płatności</h5>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="payment" id="payment1" value="karta" required>
-                        <label class="form-check-label" for="payment1">
-                            Płatność kartą
-                        </label>
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                    <div class="mb-4 me-md-4">
+                        <h5>Opcje płatności</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="payment1" value="karta" required>
+                            <label class="form-check-label" for="payment1">
+                                Płatność kartą
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="payment2" value="blik">
+                            <label class="form-check-label" for="payment2">
+                                BLIK
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="payment3" value="przelew">
+                            <label class="form-check-label" for="payment3">
+                                Przelew bankowy
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="payment" id="payment2" value="blik">
-                        <label class="form-check-label" for="payment2">
-                            BLIK
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="payment" id="payment3" value="przelew">
-                        <label class="form-check-label" for="payment3">
-                            Przelew bankowy
-                        </label>
+                
+                    <div class="card summary-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Podsumowanie</h5>
+                            <p class="card-text">Łączna kwota: 23.61 zł</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Złóż zamówienie</button>
+                    <button type="submit" class="btn btn-primary relbtn">Złóż zamówienie</button>
                 </div>
             </form>
         </div>

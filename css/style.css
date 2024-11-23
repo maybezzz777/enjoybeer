@@ -182,7 +182,16 @@
     flex-direction: column;
     justify-content: space-between; /* Wyrównanie przycisków na dole */
     height: 100%;
-    padding:20px; 
+    padding:30px; 
+    margin-top: 25px;
+}
+
+
+.summary-card {
+    min-width: 200px; /* Zapewnia czytelność dla mniejszych ekranów */
+}
+.d-flex > .mb-4 {
+    flex: 1; /* Wyrównuje szerokość sekcji */
 }
 
 .card:hover {
@@ -349,7 +358,31 @@ body.noscroll {
     margin-bottom: 10px !important;
 }
 
-@media (max-width: 768px) { .card-body { text-align: center !important; } }
+@media (max-width: 768px) { 
+    .card-body {
+     text-align: center !important;
+     } 
+     .summary-card {
+        margin: 0 auto 10px; /* Wyśrodkowanie i margines dolny */
+        display: block; /* Upewniamy się, że element zachowuje się jak blokowy */
+    }
+    .relbtn{
+       margin: 20px 0;
+    }
+    .summary-card {
+        width: 80%;
+        margin: auto;
+    }
+    .card-title {
+        font-size: 1.1rem;
+
+    }
+    .rel{
+        margin-top: 50px;
+    }
+}
+
+
 
 .login{
     width: 100%;
@@ -410,4 +443,50 @@ body.noscroll {
     border-color: #d35400;
   }
 
-  
+  .form-check-input[type="radio"] 
+  { 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    display: inline-block; 
+    position: relative; 
+    background-color: #f1f1f1; 
+    color: #444; 
+    top: 2px; 
+    height: 20px; 
+    width: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 50%; 
+    transition: background 0.3s ease-in-out; 
+    cursor: pointer; margin-right: 10px; 
+} 
+
+ .form-check-input[type="radio"]:after 
+{ 
+    content: '';
+    display: block; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%; 
+    background: #f39c12; 
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out; 
+    }
+   .form-check-input[type="radio"]:checked:after 
+   { transform: translate(-50%, -50%) scale(1); }
+
+   .form-control, .form-check-label {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+.form-control:focus {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #f39c12;
+    box-shadow: 0 0 5px #f39c12;
+}
+
