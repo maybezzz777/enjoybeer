@@ -153,6 +153,7 @@
 
 .bg-mydark {
     background-color: rgba(15, 15, 15, 0.959);
+    color:#fff;
 }
 
 .card {
@@ -168,6 +169,20 @@
     flex-direction: column;
     justify-content: space-between; /* Wyrównanie przycisków na dole */
     height: 100%;
+}
+
+.rel{
+    background-color: #1e1e1e; /* Ciemne tło */
+    color: #fff; /* Biały tekst */
+    border: none; /* Usunięcie ramki */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtelny cień */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Wyrównanie przycisków na dole */
+    height: 100%;
+    padding:20px; 
 }
 
 .card:hover {
@@ -394,3 +409,5 @@ body.noscroll {
     background-color: #d35400;
     border-color: #d35400;
   }
+
+  
