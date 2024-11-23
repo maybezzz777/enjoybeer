@@ -238,6 +238,10 @@
     background-color: #d35400;
 }
 
+.rel .btn:hover{
+    background-color: #d35400;
+}
+
 .cart .btn {
     background-color: #f39c12; 
     color: #fff;
