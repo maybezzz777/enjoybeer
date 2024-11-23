@@ -1,0 +1,396 @@
+/* Poprawki do nawigacji */
+.navbar-brand img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    z-index: 999;
+}
+
+#mainNav {
+    background-color: transparent !important;
+}
+
+.nav-item i {
+    color: white;
+}
+
+#mainNav a {
+    color: white !important;
+}
+
+#mainNav a:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+
+#mainNav .active {
+  color: #f39c12 !important;
+  transform: scale(1.2);
+  font-weight: 700;
+}
+
+#mainNav .active i {
+    color: #f39c12 !important;
+    transform: scale(1.2);
+    font-weight: 700;
+  }
+
+
+
+@media(max-width: 991px) {
+    .navbar-collapse {
+        position: fixed; /* Ustawienie fixed, aby nawigacja była na stałe */
+        top: 50%; /* Wyśrodkowanie w pionie */
+        left: 50%; /* Wyśrodkowanie w poziomie */
+        transform: translate(-50%, -50%); /* Dostosowanie do środka */
+        backdrop-filter: blur(6px);
+        background-color: rgba(0, 0, 0, 0.3);
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        transition: height 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        visibility: hidden; /* Ukrycie nawigacji początkowo */
+    }
+
+    .nav-item i {
+        display: none; /* Ukryj ikonki */
+    }
+    .nav-item span {
+        display: inline; /* Pokaż tekst */
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+        visibility: visible; /* Pokazanie nawigacji po rozwinięciu */
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:nth-child(4) {
+        transition-delay: 0.5s;
+    }
+
+    .navbar-collapse .navbar-nav .nav-item:nth-child(5) {
+        transition-delay: 0.6s;
+    }
+
+    .navbar-collapse.show {
+        height: 100vh;
+        opacity: 1;
+    }
+
+    #mainNav a {
+        text-shadow: -1px 4px 5px rgba(66, 68, 90, 0.5);
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%; /* Ustalamy szerokość na 100% */
+        padding: 10px 0;
+        text-align: center;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+    }
+
+    /* Dla linków w nawigacji */
+    .navbar-nav .nav-item a {
+        display: block; /* Ustawiamy linki na 100% szerokości */
+        width: 100%;
+        padding: 12px 0; /* Większe pady dla lepszego wyglądu */
+        text-align: center;
+        color: white !important;
+        text-decoration: none;
+    }
+
+    .navbar-collapse.show .navbar-nav .nav-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Poprawki do przycisków */
+.navbar-toggler {
+    z-index: 9999;
+    margin-top: 15px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card-footer .btn {
+    width: 100%; /* Przyciski zajmują całą szerokość karty */
+}
+
+.card-footer .btn i {
+    font-size: 1.5rem;
+}
+
+.bg-mydark {
+    background-color: rgba(15, 15, 15, 0.959);
+}
+
+.card {
+    background-color: #1e1e1e; /* Ciemne tło */
+    color: #fff; /* Biały tekst */
+    border: none; /* Usunięcie ramki */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtelny cień */
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Wyrównanie przycisków na dole */
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Powiększenie na hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+}
+
+.card img {
+    object-fit: contain; /* Umożliwia pełne dopasowanie obrazu */
+    height: 250px; /* Zwiększ wysokość, aby pokazać więcej butelki */
+    width: 100%;
+    padding: 10px; /* Dystans od krawędzi */
+    background-color: #1e1e1e; /* Tło wypełniające wolne przestrzenie */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7); /* Lekko szary tekst */
+}
+
+.card-footer {
+    background-color: rgba(30, 30, 30, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.card-footer .btn {
+    background-color: #f39c12; /* Akcent kolorystyczny */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.card-footer .btn:hover {
+    background-color: #d35400; /* Kolor hover */
+}
+
+/* Poprawki do przycisków w koszyku */
+.cart .btn {
+    background-color: #f39c12; /* Akcent kolorystyczny */
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.cart .btn:hover {
+    background-color: #d35400; /* Kolor hover */
+}
+
+.main img{
+    max-width: 600px;
+    max-height: 800px;
+}
+
+.main .becks{
+    max-width: 400px;
+    max-height: 600px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left, .middle, .right {
+    padding: 20px;
+}
+
+.left {
+    color: white;
+}
+
+.price {
+    color: rgba(247, 243, 243, 0.877);
+}
+
+.middle img {
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.right {
+    color: white;
+}
+
+.right .social-icons li {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.right .social-icons a {
+    color: rgba(247, 243, 243, 0.753);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.right .social-icons a:hover {
+    color: #f39c12;
+    transform: scale(1.2);
+}
+
+.main h1 {
+    color: #f39c12;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.main p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: rgba(235, 235, 77, 0.692);
+    transition: 0.2s;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+
+.nav-item span {
+    display: none;
+}
+
+
+.summary-card {
+    padding: 10px !important;
+    margin-bottom: 0 !important;
+    max-height: 300px;
+}
+.summary-card .card-title {
+    margin-bottom: 10px !important;
+}
+.summary-card .card-text {
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 768px) { .card-body { text-align: center !important; } }
+
+.login{
+    width: 100%;
+}
+
+.form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+.form-control:focus {
+    background-color: #444;
+    color: #fff;
+    border-color: #777;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+.form-floating label {
+    color: #bbb;
+    transition: 0.3s;
+}
+.form-floating .form-control:focus~label {
+    color: #fff;
+}
+.card {
+    background-color: #222;
+    color: #e0e0e0;
+}
+.card-header,
+.card-footer {
+    background-color: #333;
+}
+.btn-primary,
+.btn-primary.login:hover,
+.btn-primary.login:active {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+.btn-primary.login:hover,
+.btn-primary.login:active
+{
+    background-color: #d35400;
+    border-color: #d35400;
+}
+.small a {
+    color: #f39c12;
+}
+.small a:hover {
+    color: #d35400;
+}
+
+.reglink{
+    font-weight: 700;
+    font-size: larger;
+}
+
+.form-check-input:checked {
+    background-color: #d35400;
+    border-color: #d35400;
+  }

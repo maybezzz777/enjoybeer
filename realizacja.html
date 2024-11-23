@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Realizacja zamówienia w EnjoyBeer" />
+    <meta name="author" content="EnjoyBeer" />
+    <title>Realizacja Zamówienia - EnjoyBeer</title>
+    <link rel="icon" type="image/x-icon" href="img/Logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .navbar {
+            background-color: #1e1e1e;
+        }
+        .navbar a.nav-link {
+            color: #e0e0e0;
+        }
+        .navbar a.nav-link:hover {
+            color: #f39c12;
+        }
+        .main {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .form-control, .form-check-label {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+            border: 1px solid #444;
+        }
+        .form-control:focus {
+            background-color: #333;
+            color: #e0e0e0;
+            border-color: #f39c12;
+            box-shadow: 0 0 5px #f39c12;
+        }
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #d87b0f;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <div class="navbar-brand"><img src="img/Logo.png" alt="logo" ></div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Strona Główna</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sklep.html">Sklep</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofirmie.html">O firmie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="konto.html"><i class="fa-solid fa-user d-none d-lg-inline"></i><span class="d-inline d-lg-none">Logowanie</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="koszyk.html"><i class="fa-solid fa-cart-shopping d-none d-lg-inline"></i><span class="d-inline d-lg-none">Koszyk</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 main">
+        <div class="container">
+            <h1 class="text-center mb-4">Realizacja Zamówienia</h1>
+            <form>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="useAccountData" />
+                    <label class="form-check-label" for="useAccountData">Użyj danych z konta</label>
+                </div>
+                <div class="row">
+                    <!-- Dane osobowe -->
+                    <div class="col-md-6 mb-4">
+                        <h5>Dane osobowe</h5>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="imie" type="text" required placeholder="Imię" />
+                            <label for="imie">Imię</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="nazwisko" type="text" required placeholder="Nazwisko" />
+                            <label for="nazwisko">Nazwisko</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" required placeholder="Email" />
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="telefon" type="tel" required placeholder="nr. Telefonu" />
+                            <label for="telefon">nr. Telefonu</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <h5>Adres dostawy</h5>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="adres" type="text" required placeholder="Adres" />
+                            <label for="adres">Adres</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="miasto" type="text" required placeholder="Miasto" />
+                            <label for="miasto">Miasto</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="kod" type="text" required placeholder="Kod pocztowy" />
+                            <label for="kod">Kod pocztowy</label>
+                        </div>
+                    </div>
+                </div>
+
+  
+                <div class="mb-4">
+                    <h5>Opcje płatności</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="payment1" value="karta" required>
+                        <label class="form-check-label" for="payment1">
+                            Płatność kartą
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="payment2" value="blik">
+                        <label class="form-check-label" for="payment2">
+                            BLIK
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="payment3" value="przelew">
+                        <label class="form-check-label" for="payment3">
+                            Przelew bankowy
+                        </label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Złóż zamówienie</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>   
+</body>
+</html>
