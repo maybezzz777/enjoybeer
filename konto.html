@@ -42,9 +42,9 @@
                             <h3 class="text-center font-weight-light my-4">Logowanie</h3>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form aria-required="">
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="inputEmail" type="email" required placeholder="name@example.com" />
+                                    <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" required />
                                     <label for="inputEmail">Adres Email</label>
                                 </div>
                                 <div class="form-floating mb-3">
@@ -53,7 +53,7 @@
                                 </div>
                                 
                                 <div class="bottom">
-                                <a class="btn btn-primary login" href="#">Zaloguj się</a>
+                                <button class="btn btn-primary login" type="submit">Zaloguj się</button>
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
                                     <label class="form-check-label" for="inputRememberPassword">Zapamiętaj mnie</label>

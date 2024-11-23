@@ -97,3 +97,4 @@ document.getElementById('useAccountData').addEventListener('change', function() 
         input.value = isChecked ? mockData[field] : '';
     });
 });
+
