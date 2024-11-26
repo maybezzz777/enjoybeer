@@ -32,35 +32,59 @@
                 </div>
             </div>
         </nav>
-                    
-
 
         <section class="py-5 bg-mydark main">
-
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
                         <h1 class="display-5 fw-bolder">Budweiser</h1>
-                        <p class="lead">Budweiser to amerykańskie piwo lager o jasnozłotej barwie i delikatnej, orzeźwiającej nucie smaku. Charakteryzuje się wyważoną goryczką 
+                        <p class="lead">
+                            Budweiser to amerykańskie piwo lager o jasnozłotej barwie i delikatnej, orzeźwiającej nucie smaku. Charakteryzuje się wyważoną goryczką 
                             oraz subtelnymi nutami chmielu i słodu. Jego lekka, orzeźwiająca konsystencja sprawia, że jest popularnym wyborem na spotkania towarzyskie i w upalne 
-                            dni.</p>
-                            <div class="fs-5 mb-5">
-                                <span class="price">6.99zł</span>
-                            </div>
+                            dni.
+                        </p>
+                        <div class="fs-5 mb-5">
+                            <span class="price">6.99zł</span>
+                        </div>
                         <div class="d-flex cart justify-content-center">
                             <input class="form-control text-center me-3" id="inputQuantity" type="number" min="1" max="20" value="1" style="max-width: 4rem" />
-                            <button class="btn btn-outline-dark mt-auto" type="button">
+                            <button class="btn btn-outline-dark mt-auto add-to-cart" type="button" data-id="budweiser" data-name="Budweiser" data-price="6.99" data-image="budweiser.png">
                                 <i class="fa-solid fa-cart-plus"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 mt-5" src="piwo/budweiser.png" alt="heineken" /></div>
+                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 mt-5" src="piwo/budweiser.png" alt="Budweiser" /></div>
                 </div>
             </div>
-
         </section>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('.add-to-cart').addEventListener('click', event => {
+                    const button = event.currentTarget;
+                    const item = {
+                        id: button.getAttribute('data-id'),
+                        name: button.getAttribute('data-name'),
+                        price: parseFloat(button.getAttribute('data-price')),
+                        quantity: parseInt(document.getElementById('inputQuantity').value),
+                        image: button.getAttribute('data-image')
+                    };
+
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    const existingItemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+
+                    if (existingItemIndex > -1) {
+                        cart[existingItemIndex].quantity += item.quantity;
+                    } else {
+                        cart.push(item);
+                    }
+
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert('Dodano do koszyka!');
+                });
+            });
+        </script>
         <script src="js/scripts.js"></script>
     </body>
 </html>

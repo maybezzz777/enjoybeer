@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top position-absolute" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <div class="navbar-brand"><img src="img/Logo.png" alt="logo" ></div>
+            <div class="navbar-brand"><img src="img/Logo.png" alt="logo"></div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="bi bi-list"></i>
             </button>
@@ -34,92 +34,118 @@
 
     <section class="py-5 bg-mydark main">
         <div class="container">
-
             <div class="rel">
-            <h1 class="text-center mb-4">Realizacja Zamówienia</h1>
-            <form>
-                <div class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="useAccountData" />
-                    <label class="form-check-label" for="useAccountData">Użyj danych z konta</label>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <h5>Dane osobowe</h5>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="imie" type="text" required placeholder="Imię" />
-                            <label for="imie">Imię</label>
+                <h1 class="text-center mb-4">Realizacja Zamówienia</h1>
+                <form id="order-form">
+                    <div class="mb-4 form-check">
+                        <input type="checkbox" class="form-check-input" id="useAccountData" />
+                        <label class="form-check-label" for="useAccountData">Użyj danych z konta</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <h5>Dane osobowe</h5>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="imie" type="text" required placeholder="Imię" />
+                                <label for="imie">Imię</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="nazwisko" type="text" required placeholder="Nazwisko" />
+                                <label for="nazwisko">Nazwisko</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" required placeholder="Email" />
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="telefon" type="tel" required placeholder="nr. Telefonu" />
+                                <label for="telefon">nr. Telefonu</label>
+                            </div>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="nazwisko" type="text" required placeholder="Nazwisko" />
-                            <label for="nazwisko">Nazwisko</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" required placeholder="Email" />
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="telefon" type="tel" required placeholder="nr. Telefonu" />
-                            <label for="telefon">nr. Telefonu</label>
+
+                        <div class="col-md-6 mb-4">
+                            <h5>Adres dostawy</h5>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="adres" type="text" required placeholder="Adres" />
+                                <label for="adres">Adres</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="miasto" type="text" required placeholder="Miasto" />
+                                <label for="miasto">Miasto</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="kod" type="text" required placeholder="Kod pocztowy" />
+                                <label for="kod">Kod pocztowy</label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mb-4">
-                        <h5>Adres dostawy</h5>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="adres" type="text" required placeholder="Adres" />
-                            <label for="adres">Adres</label>
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
+                        <div class="mb-4 me-md-4">
+                            <h5>Opcje płatności</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="payment1" value="karta" required>
+                                <label class="form-check-label" for="payment1">
+                                    Płatność kartą
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="payment2" value="blik">
+                                <label class="form-check-label" for="payment2">
+                                    BLIK
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="payment3" value="przelew">
+                                <label class="form-check-label" for="payment3">
+                                    Przelew bankowy
+                                </label>
+                            </div>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="miasto" type="text" required placeholder="Miasto" />
-                            <label for="miasto">Miasto</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="kod" type="text" required placeholder="Kod pocztowy" />
-                            <label for="kod">Kod pocztowy</label>
+                    
+                        <div class="card summary-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Podsumowanie</h5>
+                                <p class="card-text">Łączna kwota: <span id="total-amount">0.00</span> zł</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-start">
-                    <div class="mb-4 me-md-4">
-                        <h5>Opcje płatności</h5>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="payment" id="payment1" value="karta" required>
-                            <label class="form-check-label" for="payment1">
-                                Płatność kartą
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="payment" id="payment2" value="blik">
-                            <label class="form-check-label" for="payment2">
-                                BLIK
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="payment" id="payment3" value="przelew">
-                            <label class="form-check-label" for="payment3">
-                                Przelew bankowy
-                            </label>
-                        </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary relbtn" id="submit-button">Złóż zamówienie</button>
                     </div>
-                
-                    <div class="card summary-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Podsumowanie</h5>
-                            <p class="card-text">Łączna kwota: 23.61 zł</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary relbtn">Złóż zamówienie</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>   
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalAmountElement = document.getElementById('total-amount');
+            const submitButton = document.getElementById('submit-button');
+
+            function loadCartTotal() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let total = 0;
+
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                });
+
+                totalAmountElement.textContent = total.toFixed(2);
+
+                // Disable submit button if cart is empty
+                if (cart.length === 0) {
+                    submitButton.disabled = true;
+                    alert('Koszyk jest pusty. Dodaj produkty przed przejściem do kasy.');
+                } else {
+                    submitButton.disabled = false;
+                }
+            }
+
+            loadCartTotal();
+        });
+    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
